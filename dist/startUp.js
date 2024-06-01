@@ -11,8 +11,7 @@ app.get('/', function (req, res) {
   res.sendFile('index.html!');
 });
 
-app.listen(3000, function () {
-  console.log("DBDesigner listening on port 3000!");
-  console.log("Navigate your browser to 'http://localhost:3000'");
+app.listen(process.env.PORT, function () {
+  console.log(`DBDesigner listening on port http://localhost:${process.env.PORT}`);
 });
 
